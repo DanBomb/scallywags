@@ -16,11 +16,23 @@ namespace scallywags
     public void DrawCard()
     {
       Card c = deck.DrawCard();
+      Card d = deck.DrawCard();
+      Card e = deck.DrawCard();
       if(CanDraw()){
-        if (c != null)
+        if (c != null && d != null && e != null)
         {
           Hand.Add(c);
-          Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {c.Title()}");
+          Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {c.Title()}; Bonus: {c.Effect()}; System Type: {c.Type()}");
+          if (CanDraw())
+          {
+            Hand.Add(d);
+            Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {d.Title()}; Bonus: {d.Effect()}; System Type: {d.Type()}");
+          }
+          if (CanDraw())
+          {
+            Hand.Add(e);
+            Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {e.Title()}; Bonus: {e.Effect()}; System Type: {e.Type()}");
+          }  
         }
         else
         {
