@@ -1,0 +1,4 @@
+namespace scallywags
+{
+  class Island { }
+}
