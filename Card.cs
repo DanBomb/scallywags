@@ -4,10 +4,10 @@ namespace scallywags
   {
     private string title = "Card1";
     private string desc = "This is a card";
-    private int effect = 2;
+    private string effect = "2";
     private string type = "General";
 
-    public Card(string Title, string Description, int Effect, string Type)
+    public Card(string Title, string Description, string Effect, string Type)
     {
       title = Title;
       desc = Description;
@@ -25,7 +25,7 @@ namespace scallywags
       return desc;
     }
 
-    public int Effect()
+    public string Effect()
     {
       return effect;
     }

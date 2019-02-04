@@ -23,15 +23,18 @@ namespace scallywags
         {
           Hand.Add(c);
           Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {c.Title()}; Bonus: {c.Effect()}; System Type: {c.Type()}");
+          System.Threading.Thread.Sleep(1000);
           if (CanDraw())
           {
             Hand.Add(d);
             Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {d.Title()}; Bonus: {d.Effect()}; System Type: {d.Type()}");
+            System.Threading.Thread.Sleep(1000);
           }
           if (CanDraw())
           {
             Hand.Add(e);
             Console.WriteLine($"Hand Size: {Hand.Count}; Card Drawn: {e.Title()}; Bonus: {e.Effect()}; System Type: {e.Type()}");
+            System.Threading.Thread.Sleep(1000);
           }  
         }
         else
