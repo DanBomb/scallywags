@@ -10,6 +10,12 @@ namespace scallywags
     int handMaxSize = 5;
     public List<Card> Hand = new List<Card>();
 
+    // These are the player's ship stats
+    public int shipLevel;
+    public int shipDamage = 10 + 5 * shipLevel;
+    public int shipSpeed = 10 + 10 * shipLevel; 
+    public int shipHealth = 15 + shipLevel * 5;
+   
     // Hard-coded deck of size 10, maybe make that a config variable?
     private Deck deck = new Deck(10);
 
