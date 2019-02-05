@@ -7,8 +7,12 @@ namespace scallywags
         static void Main(string[] args)
         {
 
+            int userInput;
+            bool gamePlay = false;
+
             Console.WriteLine("Press spacebar to begin the game");
             Console.ReadKey();
+            gamePlay = true;
             Console.WriteLine();
             Console.WriteLine("Welcome to Scallywags!");
             System.Threading.Thread.Sleep(2000);
@@ -19,8 +23,39 @@ namespace scallywags
             while(me.CanDraw()){
                 me.DrawCard();
             }
-            //me.DrawCard();
-                
+
+            while (gamePlay == true)
+            {
+                userInput = 0;
+                Console.WriteLine("Please choose an option:");
+                //Console.WriteLine("Move - m");
+                //Console.WriteLine("Play card - p");
+                //Console.WriteLine("Attack - a");
+                Console.WriteLine("View Hand - v");
+                Console.WriteLine("Quit Game - q");
+ 
+                userInput = Console.Read();
+                /* if (userInput = "p")
+                {
+                    me.PlayCard();
+                }*/ 
+                Console.WriteLine("test");
+                Console.WriteLine(userInput);
+                if (userInput == 118)
+                {
+                Console.WriteLine("You chose: View Hand");
+                System.Threading.Thread.Sleep(1000);
+                me.ShowHand();
+                }
+                else if (userInput == 113)
+                {
+                    gamePlay = false;
+                }
+                else if (userInput == 0)
+                {
+                    Console.WriteLine("testing");
+                }
+            }
         }
     }
 }

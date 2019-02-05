@@ -27,7 +27,7 @@ namespace scallywags
       systemTypes = new List<string> {"Crew", "Crew", "Deck", "Rigging", "Crew", "Combat", "Crew", "Combat", "Ship"};
     }
 
-    public Card DrawCard(int cardsToDraw = 1 )
+    public Card DrawCard(int cardsToDraw = 1)
     {
       if (currentSize > 0)
       {
