@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace scallywags
 {
 
-  public class Player
+  public class Player : Ship : Combat
   {
     int handMaxSize = 10;
     public List<Card> Hand = new List<Card>();
