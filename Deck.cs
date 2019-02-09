@@ -14,7 +14,7 @@ namespace scallywags
     public List<string> systemTypes;
     private static Random rnd = new Random();
 
-    public Deck(int maxSize = 10)
+    public Deck(int maxSize = 5)
     {
       size = maxSize;
       currentSize = maxSize;
@@ -32,7 +32,7 @@ namespace scallywags
       if (currentSize > 0)
       {
         // Set a random number and use it for both lists
-        int r = (rnd.Next(8)+1);
+        int r = (rnd.Next(4)+1);
         currentSize--;
         return new Card(names[r], descriptions[r], effects[r], systemTypes[r]);
       } else {

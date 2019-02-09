@@ -5,13 +5,15 @@ using System.Collections.Generic;
 namespace scallywags
 {
 
-  public class Player : Ship : Combat
+  public class Player
   {
-    int handMaxSize = 10;
+    int handMaxSize = 5;
     public List<Card> Hand = new List<Card>();
 
+    public Ship player = new Ship(1, "The Player's Ship");
+
     // Hard-coded deck of size 10, maybe make that a config variable?
-    private Deck deck = new Deck(10);
+    private Deck deck = new Deck(5);
 
     public void DrawCard()
     {
